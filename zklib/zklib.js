@@ -36,6 +36,8 @@ ZKLib.prototype._executeCmd = function(command, command_string,cb) {
     if(reply && reply.length) {
       self.session_id = reply.readUInt16LE(4);
       self.reply_id = reply.readUInt16LE(6);
+      console.log("cmd:"+buf.toString('hex'));
+      console.log("reply:"+reply.toString('hex'));
       cb(!self.checkValid(reply), reply);
     }else{
       cb("zero length reply");
