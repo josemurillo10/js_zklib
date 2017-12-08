@@ -36,7 +36,7 @@ async.series(
       });
     },
     function(cb,err,ret) {
-      zk.getattendance( function(err, ret) {
+      zk.getAttendance( function(err, ret) {
         console.log(err,ret);
         cb();
       });
