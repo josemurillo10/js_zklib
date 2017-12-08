@@ -3,10 +3,12 @@ var async = require('async');
 
 
 var zk = new ZKLib({
-  ip:"10.22.150.51",
+  ip:"192.168.1.225",
   port:4370,
   inport:5200
 });
+
+console.log('eaea');
 
 async.series(
   [
